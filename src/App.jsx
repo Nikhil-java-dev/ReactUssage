@@ -1,5 +1,6 @@
+import Counter from "./Topic-13 useEffect & stealCase/Counter";
 
-import Counter from './Topic-7 useState Hook/Counter';
+
 
 
 const App = () => {
