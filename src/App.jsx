@@ -1,4 +1,5 @@
 import Counter from "./Topic-13 useEffect & stealCase/Counter";
+import Parent from "./Topic-14 React Memo/Parent";
 
 
 
@@ -6,7 +7,7 @@ import Counter from "./Topic-13 useEffect & stealCase/Counter";
 const App = () => {
   return (
      <div id="app-component">
-            <Counter/>
+            <Parent/>
       </div>
   );
 };
