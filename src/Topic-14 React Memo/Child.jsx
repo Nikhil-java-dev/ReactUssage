@@ -1,12 +1,11 @@
 import React from 'react'
 
-const Child = React.memo((props) => {
-    console.log("Child Render", props.user);
+const Child = () => {
+    console.log("child render");
   return (
     <div>
         <h1>Child Component</h1>
     </div>
   )
 }
-)
 export default Child

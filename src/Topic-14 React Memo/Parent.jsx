@@ -1,42 +1,33 @@
-import { useState, useMemo } from "react";
-import Child from "./Child";
-import "./style.css";
+import { useState } from 'react'
+import Child from './Child';
+
 
 const Parent = () => {
-  const [status, setStatus] = useState(false);
-  const [count, setCount] = useState(0);
+  const[text, setText] = useState("")
+  const[count, setCount] = useState(0)
 
-  console.log("Parent Render");
+  console.log("parent render");
+
+  const handleChange= (e) => {
+    console.log(e.target.value);
+    setText(e.target.value)
+
+  }
+
+  const handleClick = () => {
+    setCount(count + 1)
+  }
 
   return (
     <div id="parent-component">
-      <h1>Parent Component</h1>
+      <h1>Parent component</h1>
+      <input type="text" value={text} onChange={handleChange}/>
+      <h1>count:{count}</h1>
+      <button onClick={handleClick}>Click Me</button>
+      <Child />
 
-      <div className="toggle-container">
-        <button onClick={() => setStatus(!status)}>
-          {status ? "Hide" : "Show"}
-        </button>
-        <p className={status ? "show" : "hide"}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laborum
-          tempore similique facere ut, sint magnam asperiores odio praesentium
-          deleniti, cum enim nostrum. Reiciendis iure aperiam blanditiis cum
-          porro ad quam neque enim perspiciatis perferendis vel earum molestiae,
-          labore magnam!
-        </p>
-      </div>
-
-      <div>
-        <h2>Count: {count}</h2>
-        <button onClick={() => setCount(count + 1)}>Add</button>
-      </div>
-
-      <Child
-        user={useMemo(() => {
-          return { username: "Tinku" };
-        }, [])}
-      />
     </div>
-  );
-};
+  )
+}
 
-export default Parent;
+export default Parent
