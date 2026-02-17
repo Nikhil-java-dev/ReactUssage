@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from 'react'
 
 const Child = () => {
     console.log("child render");
@@ -8,5 +8,5 @@ const Child = () => {
     </div>
   )
 }
-export default React.memo(Child)
+export default memo(Child)
  
