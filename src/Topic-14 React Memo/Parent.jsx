@@ -4,7 +4,7 @@ import Child from './Child';
 
 const Parent = () => {
   const[text, setText] = useState("")
-  const[count, setCount] = useState(0)
+  const[emp, setEmp] = useState({username:"abc", age:21})
 
   console.log("parent render");
 
@@ -15,17 +15,16 @@ const Parent = () => {
   }
 
   const handleClick = () => {
-    setCount(count + 1)
-  }
+    setEmp({...emp, username:"xyz", age:24})
+  };
 
   return (
     <div id="parent-component">
       <h1>Parent component</h1>
       <input type="text" value={text} onChange={handleChange}/>
-      <h1>count:{count}</h1>
+      <h1>count</h1>
       <button onClick={handleClick}>Click Me</button>
-      <Child />
-
+      <Child user={emp}/>
     </div>
   )
 }
