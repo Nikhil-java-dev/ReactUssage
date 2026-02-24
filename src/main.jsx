@@ -8,6 +8,9 @@ import Home from "./Topic-21 React Router Part-1/Home.jsx";
 import About from "./Topic-21 React Router Part-1/About.jsx";
 import Contact from "./Topic-21 React Router Part-1/Contact.jsx";
 import NotFound from "./Topic-21 React Router Part-1/NotFound.jsx";
+import Services from "./Topic-21 React Router Part-1/Services.jsx";
+import User from "./Topic-21 React Router Part-1/User.jsx";
+import Seller from "./Topic-21 React Router Part-1/Seller.jsx";
 
 /**
  * Router Configuration Setup
@@ -29,6 +32,24 @@ const appRouter = createBrowserRouter([
       {
         path:"contact",
         element:<Contact/>
+      },
+      {
+        path:"services",
+        element:<Services/>,
+        children: [
+          {
+            index:true,
+            element:<h1>Welcome to Services Page</h1>
+          },
+          {
+            path:"seller",
+            element:<Seller/>
+          },
+          {
+            path:"user",
+            element:<User/>
+          },
+        ],
       }
     ],
     errorElement:<NotFound/>
