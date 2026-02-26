@@ -16,53 +16,54 @@ import Seller from "./Topic-21 React Router Part-1/Seller.jsx";
  * Router Configuration Setup
  */
 
-const appRouter = createBrowserRouter([
-  {
-    path:"/",
-    element:<App/>,
-    children:[
-      {
-        path:"",
-        element:<Home/>
-      },
-      {
-        path:"about",
-        element: <About/>
-      },
-      {
-        path:"contact",
-        element:<Contact/>
-      },
-      {
-        path:"services",
-        element:<Services/>,
-        children: [
-          {
-            index:true,
-            element:<h1>Welcome to Services Page</h1>
-          },
-          {
-            path:"seller",
-            element:<Seller/>
-          },
-          {
-            path:"user",
-            element:<User/>
-          },
-        ],
-      }
-    ],
-    errorElement:<NotFound/>
-  }
+// const appRouter = createBrowserRouter([
+//   {
+//     path:"/",
+//     element:<App/>,
+//     children:[
+//       {
+//         path:"",
+//         element:<Home/>
+//       },
+//       {
+//         path:"about",
+//         element: <About/>
+//       },
+//       {
+//         path:"contact",
+//         element:<Contact/>
+//       },
+//       {
+//         path:"services",
+//         element:<Services/>,
+//         children: [
+//           {
+//             index:true,
+//             element:<h1>Welcome to Services Page</h1>
+//           },
+//           {
+//             path:"seller",
+//             element:<Seller/>
+//           },
+//           {
+//             path:"user",
+//             element:<User/>
+//           },
+//         ],
+//       }
+//     ],
+//     errorElement:<NotFound/>
+//   }
   
-])
+// ])
 
 
 
 
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider  router={appRouter} />
+  //<RouterProvider  router={appRouter} />
+  <App/>
  );
  
   
