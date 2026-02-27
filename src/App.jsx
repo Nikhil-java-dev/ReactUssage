@@ -1,5 +1,7 @@
-import Controlled from "./Topic-18 Controlled and Uncontrolled/Controlled";
-import Uncontrolled from "./Topic-18 Controlled and Uncontrolled/Uncontrolled";
+
+import Controlled1 from "./Topic-18 Controlled and Uncontrolled/Controlled1";
+import Hybrid from "./Topic-18 Controlled and Uncontrolled/Hybrid";
+import Uncontrolled1 from "./Topic-18 Controlled and Uncontrolled/Uncontrolled2";
 import About from "./Topic-21 React Router Part-1/About";
 import Header from "./Topic-21 React Router Part-1/Header";
 import Home from "./Topic-21 React Router Part-1/Home";
@@ -10,10 +12,10 @@ const App = () => {
   return (
     <div id="app-component">
       {/* <Header/>
-      <Outlet/>       */}
-    {/* <Controlled/> */}
-    <Uncontrolled/>
-
+      <main>
+      <Outlet/>
+      </main>        */}
+    <Hybrid/>
     </div>
   )
 }
